@@ -3,7 +3,7 @@
 *.zip
 .npmrc
 coverage
-dist
+#dist
 dist_save
 node_modules
 .vscode
