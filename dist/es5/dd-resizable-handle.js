@@ -21,14 +21,15 @@ var DDResizableHandle = exports.DDResizableHandle = /** @class */ (function () {
     }
     /** @internal */
     DDResizableHandle.prototype._init = function () {
-        var el = document.createElement('div');
-        el.classList.add('ui-resizable-handle');
-        el.classList.add("".concat(DDResizableHandle.prefix).concat(this.dir));
-        el.setAttribute('wire:ignore.self', '');
-        el.style.zIndex = '100';
-        el.style.userSelect = 'none';
-        this.el = el;
-        this.host.appendChild(this.el);
+        // const el = document.createElement('div');
+        // el.classList.add('ui-resizable-handle');
+        // el.classList.add(`${DDResizableHandle.prefix}${this.dir}`);
+        // el.setAttribute('wire:ignore.self', '');
+        // el.style.zIndex = '100';
+        // el.style.userSelect = 'none';
+        //this.el = el;
+        this.el = this.host.querySelector('.ui-resizable-handle');
+        //this.host.appendChild(this.el);
         this.el.addEventListener('mousedown', this._mouseDown);
         if (dd_touch_1.isTouch) {
             this.el.addEventListener('touchstart', dd_touch_1.touchstart);
