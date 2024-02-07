@@ -21,7 +21,7 @@ class DDResizableHandle {
         const el = document.createElement('div');
         el.classList.add('ui-resizable-handle');
         el.classList.add(`${DDResizableHandle.prefix}${this.dir}`);
-        el.setAttribute('wire:ignore', '');
+        el.setAttribute('wire:ignore.self', '');
         el.style.zIndex = '100';
         el.style.userSelect = 'none';
         this.el = el;
